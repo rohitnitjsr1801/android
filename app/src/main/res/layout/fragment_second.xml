@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE androidx.core.widget.NestedScrollView [
+        <!ELEMENT androidx.core.widget.NestedScrollView (androidx.constraintlayout.widget.ConstraintLayout)*>
+        <!ATTLIST androidx.core.widget.NestedScrollView
+                xmlns:android CDATA #REQUIRED
+                xmlns:app CDATA #REQUIRED
+                xmlns:tools CDATA #REQUIRED
+                android:layout_width CDATA #REQUIRED
+                android:layout_height CDATA #REQUIRED
+                tools:context CDATA #REQUIRED>
+        <!ELEMENT androidx.constraintlayout.widget.ConstraintLayout (Button|TextView)*>
+        <!ATTLIST androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width CDATA #REQUIRED
+                android:layout_height CDATA #REQUIRED
+                android:padding CDATA #REQUIRED>
+        <!ELEMENT Button (#PCDATA)>
+        <!ATTLIST Button
+                android:id CDATA #REQUIRED
+                android:layout_width CDATA #REQUIRED
+                android:layout_height CDATA #REQUIRED
+                android:text CDATA #REQUIRED
+                app:layout_constraintBottom_toTopOf CDATA #REQUIRED
+                app:layout_constraintEnd_toEndOf CDATA #REQUIRED
+                app:layout_constraintStart_toStartOf CDATA #REQUIRED
+                app:layout_constraintTop_toTopOf CDATA #REQUIRED>
+        <!ELEMENT TextView (#PCDATA)>
+        <!ATTLIST TextView
+                android:id CDATA #REQUIRED
+                android:layout_width CDATA #REQUIRED
+                android:layout_height CDATA #REQUIRED
+                android:layout_marginTop CDATA #REQUIRED
+                android:text CDATA #REQUIRED
+                app:layout_constraintBottom_toBottomOf CDATA #REQUIRED
+                app:layout_constraintEnd_toEndOf CDATA #REQUIRED
+                app:layout_constraintStart_toStartOf CDATA #REQUIRED
+                app:layout_constraintTop_toBottomOf CDATA #REQUIRED>
+        ]>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="84dp"
+                android:layout_height="126dp"
+                />
+
+        <Button
+                android:id="@+id/button_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/previous"
+                />
+
+        <TextView
+                android:id="@+id/textview_second"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:text="@string/lorem_ipsum"
+                />
+
+        <Button
+                android:text="loginbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginbutton"
+                />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
